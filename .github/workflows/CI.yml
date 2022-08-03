@@ -23,6 +23,7 @@ jobs:
         call MSVC600/VC98/Bin/VCVars32.bat
         cd src_main
         call build_hl2_game.bat
+        call build_vphysics.bat
     - name: Upload arficacts
       uses: actions/upload-artifact@v3
       with:
@@ -30,5 +31,13 @@ jobs:
         path: |
           src_main/cl_dll/cl_dll___Win32_HL2_Release/client.dll
           src_main/cl_dll/cl_dll___Win32_HL2_Release/client.pdb
+          src_main/cl_dll/cl_dll___Win32_HL2_Debug/client.dll
+          src_main/cl_dll/cl_dll___Win32_HL2_Debug/client.pdb
           src_main/dlls/hl___Win32_hl2_Release/server.dll
           src_main/dlls/hl___Win32_hl2_Release/server.pdb
+          src_main/dlls/hl___Win32_hl2_Debug/server.dll
+          src_main/dlls/hl___Win32_hl2_Debug/server.pdb
+          src_main/vphysics/Release/vphysics.dll
+          src_main/vphysics/Release/vphysics.pdb
+          src_main/vphysics/Debug/vphysics.dll
+          src_main/vphysics/Debug/vphysics.pdb
