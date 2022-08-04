@@ -33,10 +33,10 @@ jobs:
           src_main/cl_dll/cl_dll___Win32_HL2_Release/client.pdb
           src_main/cl_dll/cl_dll___Win32_HL2_Debug/client.dll
           src_main/cl_dll/cl_dll___Win32_HL2_Debug/client.pdb
-          src_main/dlls/hl___Win32_hl2_Release/server.dll
-          src_main/dlls/hl___Win32_hl2_Release/server.pdb
-          src_main/dlls/hl___Win32_hl2_Debug/server.dll
-          src_main/dlls/hl___Win32_hl2_Debug/server.pdb
+          src_main/dlls/Release_hl2/server.dll
+          src_main/dlls/Release_hl2/server.pdb
+          src_main/dlls/Debug_hl2/server.dll
+          src_main/dlls/Debug_hl2/server.pdb
           src_main/vphysics/Release/vphysics.dll
           src_main/vphysics/Release/vphysics.pdb
           src_main/vphysics/Debug/vphysics.dll
