@@ -52,8 +52,8 @@ BSC32=bscmake.exe
 # ADD BASE BSC32 /nologo
 # ADD BSC32 /nologo
 LINK32=link.exe
-# ADD BASE LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /dll /machine:I386
-# ADD LINK32 /nologo /base:"0x26000000" /dll /map /machine:I386 /nodefaultlib:"libc.lib" /libpath:"..\lib\public" /libpath:"..\lib\common" /libpath:"..\ivp\havana\hk_library\win32\release\\" /libpath:"..\ivp\ivp_library\win32_release"
+# ADD BASE LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /dll /debug /machine:I386 /pdbtype:sept
+# ADD LINK32 /nologo /base:"0x26000000" /dll /debug /machine:I386 /nodefaultlib:"libc.lib" /pdbtype:sept /libpath:"..\lib\public" /libpath:"..\lib\common" /libpath:"..\ivp\havana\hk_library\win32\release\\" /libpath:"..\ivp\ivp_library\win32_release"
 # Begin Custom Build - Copying to Game Directory
 TargetDir=.\Release
 TargetPath=.\Release\vphysics.dll
