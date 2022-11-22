@@ -23,6 +23,10 @@ jobs:
         call MSVC600/VC98/Bin/VCVars32.bat
         cd src_main
         call build_hl2_game.bat
+        call build_hl1_game.bat
+        call build_cs_game.bat
+        call build_tf2_game.bat
+        call build_engine.bat
         call build_vphysics.bat
     - name: Upload arficacts
       uses: actions/upload-artifact@v3
@@ -33,10 +37,38 @@ jobs:
           src_main/cl_dll/cl_dll___Win32_HL2_Release/client.pdb
           src_main/cl_dll/cl_dll___Win32_HL2_Debug/client.dll
           src_main/cl_dll/cl_dll___Win32_HL2_Debug/client.pdb
+          src_main/cl_dll/cl_dll___Win32_HL1_Release/client.dll
+          src_main/cl_dll/cl_dll___Win32_HL1_Release/client.pdb
+          src_main/cl_dll/cl_dll___Win32_HL1_Debug/client.dll
+          src_main/cl_dll/cl_dll___Win32_HL1_Debug/client.pdb
+          src_main/cl_dll/Release_CounterStrike/client.dll
+          src_main/cl_dll/Release_CounterStrike/client.pdb
+          src_main/cl_dll/Debug_CounterStrike/client.dll
+          src_main/cl_dll/Debug_CounterStrike/client.pdb
+          src_main/cl_dll/cl_dll___Win32_TF2_Release/client.dll
+          src_main/cl_dll/cl_dll___Win32_TF2_Release/client.pdb
+          src_main/cl_dll/cl_dll___Win32_TF2_Debug/client.dll
+          src_main/cl_dll/cl_dll___Win32_TF2_Debug/client.pdb
           src_main/dlls/Release_hl2/server.dll
           src_main/dlls/Release_hl2/server.pdb
           src_main/dlls/Debug_hl2/server.dll
           src_main/dlls/Debug_hl2/server.pdb
+          src_main/dlls/Release_hl1/server.dll
+          src_main/dlls/Release_hl1/server.pdb
+          src_main/dlls/Debug_hl1/server.dll
+          src_main/dlls/Debug_hl1/server.pdb
+          src_main/dlls/Release_CounterStrike/server.dll
+          src_main/dlls/Release_CounterStrike/server.pdb
+          src_main/dlls/Debug_CounterStrike/server.dll
+          src_main/dlls/Debug_CounterStrike/server.pdb
+          src_main/dlls/Release_tf2/server.dll
+          src_main/dlls/Release_tf2/server.pdb
+          src_main/dlls/Debug_tf2/server.dll
+          src_main/dlls/Debug_tf2/server.pdb
+          src_main/engine/GLRelease/engine.pdb
+          src_main/engine/GLRelease/engine.dll
+          src_main/engine/GLDebug/engine.dll
+          src_main/engine/GLDebug/engine.pdb
           src_main/vphysics/Release/vphysics.dll
           src_main/vphysics/Release/vphysics.pdb
           src_main/vphysics/Debug/vphysics.dll
