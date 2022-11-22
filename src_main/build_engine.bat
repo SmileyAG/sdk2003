@@ -9,6 +9,8 @@
 
 goto build_releasedebug
 
+:build_releasedebug
+
 %MSDEV% engine/engine.dsp %CONFIG%"engine - Win32 Release" %build_target%
 if errorlevel 1 set BUILD_ERROR=1
 
