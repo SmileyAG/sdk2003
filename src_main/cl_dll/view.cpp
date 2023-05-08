@@ -80,6 +80,7 @@ static ConVar r_mapextents( "r_mapextents", "16384", 0,
 
 // UNDONE: Delete this or move to the material system?
 ConVar	gl_clear( "gl_clear","0");
+ConVar	gl_clear_greencolor( "gl_clear_greencolor","0");
 
 static ConVar r_farz( "r_farz", "-1", 0, "Override the far clipping plane. -1 means to use the value in env_fog_controller." );
 
@@ -774,6 +775,12 @@ void CViewRender::Render( vrect_t *rect )
 	m_View.y				= vr.y;
 	m_View.width			= vr.width;
 	m_View.height			= vr.height;
+
+	if ( gl_clear_greencolor.GetBool() )
+	{
+		materials->ClearColor3ub(0, 255, 0);
+		materials->ClearBuffers(true, false);
+	}
 
 	// Determine if we should draw view model ( client mode override )
 	drawViewModel = g_pClientMode->ShouldDrawViewModel();
